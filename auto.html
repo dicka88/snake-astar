@@ -19,17 +19,19 @@
   <button type="button" onclick="location.reload()">Refresh</button>
   <button type="button" id="play">Play</button>
   <button type="button" id="pause" hidden>Pause</button>
-  <script src="snake.js" charset="utf-8"></script>
+  <script src="snake.es6.js" charset="utf-8"></script>
+  <script src="astar.js" charset="utf-8"></script>
   <script type="text/javascript">
     var snake = new Game({
-      size: 400,
-      blockSize: 15,
-      fps: 25,
+      element: 'canvas',
+      size: 600,
+      blockSize: 18,
+      fps: 15,
       utils: {
         showGrid: true,
-        distance: true,
-        distanceCount: true,
-        distancePerpendicular: true
+        distance: false,
+        distanceCount: false,
+        distancePerpendicular: false
       },
       aStar: true
     });
